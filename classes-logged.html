@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GymEase – Classes</title>
+  <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <!-- HEADER -->
+    <header>
+      <h1>GYMEASE</h1>
+<nav class="nav">
+  <a href="index-logged.html">Home</a>
+  <a href="classes-logged.html" class="active">Classes</a>
+  <a href="memberships-logged.html">Memberships</a>
+  <a href="history-logged.html">History</a>
+  <a href="clubs-logged.html">Clubs</a>
+  <a href="login.html" class="logout-btn">Logout</a>
+</nav>
+
+    </header>
+
+    <!-- MAIN LAYOUT -->
+    <main class="history-layout" style="margin-top:24px;">
+
+      <!-- LEFT: Filter Panel -->
+      <aside class="history-stats">
+        <div class="history-tag">Filters</div>
+
+        <div class="stat-card">
+          <div class="stat-label">Location</div>
+          <select>
+            <option>Toronto Centre</option>
+            <option>Mississauga North</option>
+            <option>Scarborough East</option>
+          </select>
+        </div>
+
+        <!-- UPDATED TIME SECTION -->
+        <div class="stat-card">
+          <div class="stat-label">Time</div>
+
+          <input type="range" min="5" max="22" value="10" step="1" class="time-slider">
+
+          <div class="time-scale">
+            <span>5am</span><span>6am</span><span>7am</span><span>8am</span>
+            <span>9am</span><span>10am</span><span>11am</span><span>12pm</span>
+            <span>1pm</span><span>2pm</span><span>3pm</span><span>4pm</span>
+            <span>5pm</span><span>6pm</span><span>7pm</span><span>8pm</span>
+            <span>9pm</span><span>10pm</span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-label">Duration</div>
+          <div style="display:flex; gap:6px; flex-wrap:wrap;">
+            <span class="filter-tag">30 min</span>
+            <span class="filter-tag active">45 min</span>
+            <span class="filter-tag">60 min</span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-label">Intensity</div>
+          <div style="display:flex; gap:6px;">
+            <span class="filter-tag">Low</span>
+            <span class="filter-tag active">High</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- RIGHT: Class List -->
+      <section class="history-sections">
+        <div class="section-card">
+          <div style="display:flex; justify-content:space-between; margin-bottom:12px;">
+            <h3>8:10am</h3>
+            <span style="color:#b8b8b8;">60 min</span>
+          </div>
+          <h3>HIIT Circuit</h3>
+          <p>Instructor: <span style="color:#ffab91;">Sarah Lee</span></p>
+          <button class="btn-primary" style="margin-top:10px;" onclick="location.href='payment.html'">Book Class</button>
+        </div>
+
+        <div class="section-card">
+          <div style="display:flex; justify-content:space-between; margin-bottom:12px;">
+            <h3>10:00am</h3>
+            <span style="color:#b8b8b8;">45 min</span>
+          </div>
+          <h3>Yoga Flow</h3>
+          <p>Instructor: <span style="color:#ffab91;">Emma Wong</span></p>
+          <button class="btn-primary" style="margin-top:10px;" onclick="location.href='payment.html'">Book Class</button>
+        </div>
+
+        <div class="section-card">
+          <div style="display:flex; justify-content:space-between; margin-bottom:12px;">
+            <h3>11:30am</h3>
+            <span style="color:#b8b8b8;">30 min</span>
+          </div>
+          <h3>Strength Training</h3>
+          <p>Instructor: <span style="color:#ffab91;">John Doe</span></p>
+          <button class="btn-primary" style="margin-top:10px;" onclick="location.href='payment.html'">Book Class</button>
+        </div>
+
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      GymEase · Classes
+    </footer>
+  </div>
+</body>
+</html>

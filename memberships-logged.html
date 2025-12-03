@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GymEase – Memberships</title>
+  <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <!-- HEADER -->
+    <header>
+      <h1>GYMEASE</h1>
+<nav class="nav">
+  <a href="index-logged.html">Home</a>
+  <a href="classes-logged.html">Classes</a>
+  <a href="memberships-logged.html" class="active">Memberships</a>
+  <a href="history-logged.html">History</a>
+  <a href="clubs-logged.html">Clubs</a>
+  <a href="index.html" class="logout-btn">Logout</a>
+</nav>
+
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main style="margin-top:24px;">
+      <h2 style="text-align:center; margin-bottom:24px;">Memberships</h2>
+
+      <section class="history-sections" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:24px;">
+        
+        <!-- Membership 1 -->
+        <div class="section-card">
+          <h3>ESSENTIAL MEMBERSHIP</h3>
+          <p style="font-weight:600; color:#ffab91;">$20.99 / Mo</p>
+          <ul>
+            <li>Access to beginner-level classes</li>
+            <li>5 classes per month included</li>
+            <li>Standard online class booking</li>
+          </ul>
+          <button class="btn-primary" onclick="location.href='payment.html'">Select</button>
+        </div>
+
+        <!-- Membership 2 -->
+        <div class="section-card">
+          <h3>PREMIUM MEMBERSHIP</h3>
+          <p style="font-weight:600; color:#ffab91;">$25.99 / Mo</p>
+          <ul>
+            <li>Unlimited standard classes</li>
+            <li>Access to intermediate and advanced classes</li>
+            <li>Priority class booking</li>
+          </ul>
+          <button class="btn-primary" onclick="location.href='payment.html'">Select</button>
+          <p style="text-align:center; margin-top:12px; color:#ff7961; font-weight:600;">Most Popular!</p>
+        </div>
+
+        <!-- Membership 3 -->
+        <div class="section-card">
+          <h3>ULTIMATE MEMBERSHIP</h3>
+          <p style="font-weight:600; color:#ffab91;">$35.99 / Mo</p>
+          <ul>
+            <li>Unlimited all classes + specialty classes</li>
+            <li>Exclusive workshops included</li>
+            <li>1 personal training session per month</li>
+          </ul>
+          <button class="btn-primary" onclick="location.href='payment.html'">Select</button>
+          <p style="text-align:center; margin-top:12px; color:#ff7961; font-weight:600;">Best Value!</p>
+        </div>
+
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      GymEase · Memberships
+    </footer>
+  </div>
+</body>
+</html>
