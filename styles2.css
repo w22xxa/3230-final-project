@@ -11,6 +11,23 @@ body {
   background: #111;
   color: #f5f5f5;
 }
+.time-slider {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.time-scale {
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+  font-size: 0.6rem;
+  color: #bdbdbd;
+  text-align: center;
+  margin-top: 2px;
+}
+
+.time-scale span {
+  transform: translateX(-50%);
+}
 
 /* PAGE WRAPPER -------------------------------------------------------------- */
 
