@@ -1,37 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VAADO | Register</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GymEase – Register</title>
+  <link rel="stylesheet" href="styles2.css">
 </head>
 <body>
+  <div class="page-wrapper">
 
-<nav class="navbar">
-    <div class="logo">VAADO</div>
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="vehicles.html">Vehicles</a></li>
-        <li><a href="sell.html">Sell</a></li>
-        <li><a href="history.html">History</a></li>
-        <li><a href="support.html">Support</a></li>
-    </ul>
-</nav>
+    <!-- HEADER -->
+    <header>
+      <h1>GYMEASE</h1>
 
-<div class="register-container">
-    <div class="register-box">
-        <h2>Create Your Account</h2>
-        <input type="text" placeholder="First Name">
-        <input type="text" placeholder="Last Name">
-        <input type="email" placeholder="Email">
-        <input type="text" placeholder="Username">
-        <input type="password" placeholder="Password">
-        <input type="password" placeholder="Confirm Password">
-        <button class="register-btn">Register</button>
-        <p class="login-text">Already have an account? <a href="login.html" class="link">Log In</a></p>
-    </div>
-</div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="classes.html">Classes</a>
+        <a href="memberships.html">Memberships</a>
+        <a href="history.html">History</a>
+        <a href="clubs.html">Clubs</a>
+      </nav>
+    </header>
 
+    <!-- MAIN REGISTER SECTION -->
+    <main class="login-layout">
+      <section class="login-card">
+        <div class="section-tag">New Member</div>
+        <h2 class="payment-title">Create Your Account</h2>
+        <p class="history-subtitle">Sign up to manage classes, memberships, and personal training with GymEase.</p>
+
+        <form class="payment-form" action="#" method="post">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Choose a username" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+            <div class="form-group">
+              <label for="confirmPassword">Confirm Password</label>
+              <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+            </div>
+          </div>
+
+<button class="btn-primary" onclick="location.href='index.html'">Register</button>
+
+          <p class="summary-note">
+            Already have an account? 
+            <a href="login.html" class="link">Log In</a>
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      GymEase · Register
+    </footer>
+  </div>
+
+  <style>
+    /* REGISTER/LOGIN SPECIFIC LAYOUT */
+    .login-layout {
+      display: flex;
+      justify-content: center;
+      padding: 40px 0;
+    }
+
+    .login-card {
+      max-width: 450px;
+      width: 100%;
+    }
+
+    .login-card .link {
+      color: #ff7961;
+      text-decoration: none;
+    }
+
+    .login-card .link:hover {
+      text-decoration: underline;
+    }
+  </style>
 </body>
 </html>
