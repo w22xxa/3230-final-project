@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>FoodShare - Item Details</title>
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- top nav-->
+    <div class="container mt-3">
+        <div class="row align-items-center">
+
+            <div class="col-md-8 mb-2 mb-md-0">
+                <div class="btn-group" role="group">
+                    <a href="index.html" class="btn btn-outline-secondary">Home</a>
+                    <a href="browse.html" class="btn btn-outline-secondary">Browse</a>
+                    <a href="login.html" class="btn btn-outline-secondary">Log In/Sign Up</a>
+                    <a href="dashboard.html" class="btn btn-outline-secondary">Vendor Portal</a>
+                </div>
+            </div>
+
+            <!-- Shopping cart + logo -->
+            <div class="col-md-4 text-md-right text-center">
+                <h3 class="mb-0">
+                    <a href="#" class="cart-link" aria-label="View cart">
+                        <span class="cart-icon" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+                                <path d="M7 4H3v2h2l3.6 7.59-1.35 2.44A1 1 0 0 0 8.7 17h8.45v-2H9.7l.93-1.69L18 6H7zM7 18a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+                            </svg>
+                        </span> 
+                    </a> FoodShare 
+                </h3>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Item details -->
+    <div class="container mt-4 item-details">
+
+        <div class="row">
+
+            <!-- food info -->
+            <div class="col-md-7">
+                <h2>ESSENTIAL MEMBERSHIP</h2>
+
+                <p style="color:white;">
+                    Essential membership providing access to beginner-level classes, including 5 classes per month and standard online class booking.
+                </p>
+
+                <p>
+                    ⭐⭐⭐⭐  
+                </p>
+
+                <p style="color:white;"><strong>Price:</strong> $20.99/Mo</p>
+                <p style="color:white;"><strong>Location:</strong> Nearby Fitness Center</p>
+                <p style="color:white;"><strong>Class Duration:</strong> 45 – 60 minutes</p>
+
+                <hr>
+
+                <h5>Included Features</h5>
+        <ul>
+            <li style="color:white;">Access to beginner-friendly classes</li>
+            <li style="color:white;">Certified fitness instructors</li>
+            <li style="color:white;">Free fitness assessment</li>
+            <li style="color:white;">Flexible scheduling</li>
+        </ul>
+
+                <div class="action-row">
+                    <a href="membership.html" class="btn btn-secondary">Back to Memberships</a>
+                    <button href="" class="btn btn-primary ml-2">Select</button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+        <hr>
+
+        <!--order form-->
+
+        <div class="container">
+            <div class="request-box mt-4 mx-auto">
+                <h4 class="mb-3">Request This Item</h4>
+
+                <form action="items-details-2.html#request-success" method="get">
+                    <div id="request-success" class="alert alert-success" role="alert" aria-live="polite">
+                            Request submitted.
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-12 col-md-6">
+                                <label for="quantity">Quantity</label>
+                                <input name="quantity" type="number" class="form-control" id="quantity" placeholder="Enter quantity" min="1" required>
+                        </div>
+
+                        <div class="form-group col-12 col-md-6">
+                                <label for="pickup">Preferred Pickup Time</label>
+                                <input name="pickup" type="text" class="form-control" id="pickup" placeholder="e.g., After 3 PM">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                            <label for="notes">Notes (Optional)</label>
+                            <textarea name="notes" id="notes" class="form-control" rows="3" placeholder="Extra info..."></textarea>
+                    </div>
+
+                    <div class="text-right">
+                        <button class="btn btn-success" type="submit">Submit Request</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+
+   <!-- footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        ©FoodShare
+    </footer>
+
+
+    <!-- bootstrap js-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+    </script>
+
+</body>
+</html>

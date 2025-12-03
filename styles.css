@@ -1,0 +1,195 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #1f1f24;
+    color: white;
+}
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    padding: 15px 30px;
+    background: #2c2c33;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    background: #3a3a42;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* MAIN LAYOUT */
+.container {
+    display: flex;
+    padding: 40px;
+    gap: 50px;
+}
+
+/* WELCOME PANEL */
+.welcome-panel {
+    width: 55%;
+}
+
+.welcome-panel h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.banner-img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.tagline {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* ACCOUNT PANEL */
+.account-panel {
+    width: 40%;
+    background: #2f2f36;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.account-panel h2 {
+    margin-bottom: 20px;
+}
+
+.account-panel input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    background: #1f1f24;
+    border: none;
+    border-radius: 6px;
+    color: white;
+}
+
+.register-btn {
+    width: 100%;
+    padding: 12px;
+    background: #4a78ff;
+    border: none;
+    border-radius: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+}
+
+.login-btn {
+    background: #3a3a42;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.login-text {
+    margin-top: 15px;
+}
+
+/* VEHICLE RECOMMENDATIONS */
+.recommendation-section {
+    padding: 40px;
+}
+
+.vehicle-row {
+    display: flex;
+    gap: 30px;
+}
+
+.vehicle-card {
+    background: #2f2f36;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+}
+
+.vehicle-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.vehicle-card button {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    background: #4a78ff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+/* LOGIN PAGE */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+}
+
+.login-box {
+    background: #2f2f36;
+    padding: 40px;
+    width: 380px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.login-box h2 {
+    margin-bottom: 10px;
+}
+
+.sub-text {
+    color: #cfcfcf;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background: #1f1f24;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 15px;
+}
+
+.login-submit-btn {
+    width: 100%;
+    padding: 14px;
+    background: #4a78ff;
+    border: none;
+    border-radius: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+}
+
+.register-text {
+    margin-top: 15px;
+}
