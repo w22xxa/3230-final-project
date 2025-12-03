@@ -1,65 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VAADO | Home</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GymEase – Home</title>
+  <link rel="stylesheet" href="styles2.css">
 </head>
 <body>
+  <div class="page-wrapper">
 
-<!-- NAVIGATION BAR -->
-<nav class="navbar">
-    <div class="logo">VAADO</div>
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="vehicles.html">Vehicles</a></li>
-        <li><a href="sell.html">Sell</a></li>
-        <li><a href="history.html">History</a></li>
-        <li><a href="support.html">Support</a></li>
-    </ul>
-</nav>
+    <!-- HEADER -->
+    <header>
+      <h1>GYMEASE</h1>
 
-<!-- HERO SECTION -->
-<section class="hero-section">
-    <div class="hero-content">
-        <h1>Welcome to VAADO</h1>
-        <p>Your next vehicle starts here. Browse, sell, or purchase premium cars effortlessly.</p>
-        <div class="hero-buttons">
-            <button onclick="location.href='login.html'" class="login-btn">Log In</button>
-            <button onclick="location.href='register.html'" class="register-btn">Sign Up</button>
+      <nav class="nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="classes.html">Classes</a>
+        <a href="memberships.html">Memberships</a>
+        <a href="history.html">History</a>
+        <a href="clubs.html">Clubs</a>
+      </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="history-highlight-card" style="margin-top: 24px;">
+      <h2 class="history-title">Welcome to GymEase</h2>
+      <p class="history-subtitle">
+        Your fitness journey starts here. Train smarter, feel stronger, and reach your goals with us.
+      </p>
+    </section>
+
+    <!-- POPULAR PROGRAMS -->
+    <section class="history-sections">
+      <div class="section-card">
+        <h3>Popular Programs</h3>
+        <div class="stats-grid" style="gap: 16px;">
+          <div class="stat-card">
+            <img src="strength.jpg" alt="Strength Training" style="width:100%; border-radius:8px; margin-bottom:8px;">
+            <div class="stat-value">Strength & Conditioning</div>
+            <div class="stat-note">Duration: 60 min · Level: All Levels</div>
+            <button class="btn-primary" onclick="location.href='program-details.html'" style="margin-top:10px;">View Details</button>
+          </div>
+
+          <div class="stat-card">
+            <img src="yoga.jpg" alt="Yoga Class" style="width:100%; border-radius:8px; margin-bottom:8px;">
+            <div class="stat-value">Yoga & Flexibility</div>
+            <div class="stat-note">Duration: 45 min · Level: Beginner–Advanced</div>
+            <button class="btn-primary" onclick="location.href='program-details.html'" style="margin-top:10px;">View Details</button>
+          </div>
+
+          <div class="stat-card">
+            <img src="hiit.jpg" alt="HIIT Class" style="width:100%; border-radius:8px; margin-bottom:8px;">
+            <div class="stat-value">HIIT Power Workout</div>
+            <div class="stat-note">Duration: 30 min · Intensity: High</div>
+            <button class="btn-primary" onclick="location.href='program-details.html'" style="margin-top:10px;">View Details</button>
+          </div>
         </div>
-    </div>
+      </div>
+    </section>
 
-</section>
-
-<!-- TOP PICKS SECTION -->
-<section class="recommendation-section">
-    <h2>Top Picks For You</h2>
-    <div class="vehicle-row">
-        <div class="vehicle-card">
-            <img src="car1.jpg" alt="Car">
-            <h3>2022 Mercedes-Benz S-Class</h3>
-            <p>Price: $112,500</p>
-            <p>Mileage: 12,000 km</p>
-            <button onclick="location.href='vehicle-details.html'">View Listing</button>
-        </div>
-        <div class="vehicle-card">
-            <img src="car2.jpg" alt="Car">
-            <h3>2021 BMW M5 Competition</h3>
-            <p>Price: $98,700</p>
-            <p>Mileage: 20,500 km</p>
-            <button onclick="location.href='vehicle-details.html'">View Listing</button>
-        </div>
-        <div class="vehicle-card">
-            <img src="car3.jpg" alt="Car">
-            <h3>2022 Porsche 911 Turbo S</h3>
-            <p>Price: $229,900</p>
-            <p>Mileage: 8,300 km</p>
-            <button onclick="location.href='vehicle-details.html'">View Listing</button>
-        </div>
-    </div>
-</section>
-
+    <!-- FOOTER -->
+    <footer>
+      GymEase · Home
+    </footer>
+  </div>
 </body>
 </html>
