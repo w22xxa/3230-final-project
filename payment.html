@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>GymEase – Payment</title>
+  <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+  <div class="page-wrapper">
+    <header>
+      <h1>GYMEASE</h1>
+
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="classes.html">Classes</a>
+        <a href="memberships.html">Memberships</a>
+        <a href="history.html">History</a>
+        <a href="clubs.html">Clubs</a>
+      </nav>
+    </header>
+
+    <main class="payment-layout">
+      <!-- LEFT: Order summary -->
+      <section class="summary-card">
+        <div class="section-tag">Membership Selected</div>
+
+        <h2 class="summary-title">Essential Membership</h2>
+        <p class="summary-subtitle">
+          Perfect for members who want full gym access with flexible hours and
+          standard amenities.
+        </p>
+
+        <div class="summary-details">
+          <div class="summary-row">
+            <span>Access</span>
+            <span>Gym floor · Cardio · Strength</span>
+          </div>
+          <div class="summary-row">
+            <span>Contract</span>
+            <span>Month-to-month</span>
+          </div>
+          <div class="summary-row">
+            <span>Location</span>
+            <span>Main GymEase Club</span>
+          </div>
+          <div class="summary-row total-row">
+            <span>Total due today</span>
+            <span class="summary-price">$39.99</span>
+          </div>
+        </div>
+
+        <p class="summary-note">
+          By confirming payment, you agree to the GymEase membership terms and
+          monthly billing. You can manage or cancel your membership from your
+          account settings.
+        </p>
+      </section>
+
+      <!-- RIGHT: Payment form -->
+      <section class="payment-card">
+        <div class="section-tag">Payment Details</div>
+        <h2 class="payment-title">Complete your payment</h2>
+
+        <form class="payment-form" action="#" method="post">
+          <div class="form-group">
+            <label for="fullName">Name on card</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Ali Karimi" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email for receipt</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="cardNumber">Card number</label>
+            <input type="text" id="cardNumber" name="cardNumber" maxlength="19" placeholder="1234 5678 9012 3456" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="expiry">Expiry</label>
+              <input type="text" id="expiry" name="expiry" placeholder="MM / YY" required>
+            </div>
+
+            <div class="form-group">
+              <label for="cvv">CVV</label>
+              <input type="text" id="cvv" name="cvv" maxlength="4" placeholder="•••" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="billingAddress">Billing address</label>
+            <input type="text" id="billingAddress" name="billingAddress" placeholder="Street address">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="city">City</label>
+              <input type="text" id="city" name="city" placeholder="Toronto">
+            </div>
+            <div class="form-group">
+              <label for="postal">Postal code</label>
+              <input type="text" id="postal" name="postal" placeholder="A1A 1A1">
+            </div>
+          </div>
+
+          <div class="form-checkbox">
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">
+              I agree to the GymEase membership terms and monthly billing.
+            </label>
+          </div>
+
+          <button type="submit" class="btn-primary">
+            Pay $39.99 and activate membership
+          </button>
+
+          <p class="secure-note">
+            Your payment details are processed securely. This is a prototype
+            payment page – no real charges will be made.
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      GymEase · Payment
+    </footer>
+  </div>
+</body>
+</html>
