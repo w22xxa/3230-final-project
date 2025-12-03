@@ -6,15 +6,14 @@
   <title>GymEase – Home</title>
   <link rel="stylesheet" href="styles2.css">
 
-  <!-- Disable button styling -->
   <style>
-    .disabled-btn {
-      opacity: 0.5;
+    /* Make fake buttons look like real buttons but not clickable */
+    .fake-btn {
       pointer-events: none;
+      text-align: center;
       cursor: default;
     }
   </style>
-
 </head>
 <body>
   <div class="page-wrapper">
@@ -46,25 +45,28 @@
         <h3>Popular Programs</h3>
         <div class="stats-grid" style="gap: 16px;">
 
+          <!-- Program 1 -->
           <div class="stat-card">
             <img src="strength.jpg" alt="Strength Training" style="width:100%; border-radius:8px; margin-bottom:8px;">
             <div class="stat-value">Strength & Conditioning</div>
             <div class="stat-note">Duration: 60 min · Level: All Levels</div>
-            <button class="btn-primary disabled-btn" style="margin-top:10px;">View Details</button>
+            <div class="btn-primary fake-btn" style="margin-top:10px;">View Details</div>
           </div>
 
+          <!-- Program 2 -->
           <div class="stat-card">
             <img src="yoga.jpg" alt="Yoga Class" style="width:100%; border-radius:8px; margin-bottom:8px;">
             <div class="stat-value">Yoga & Flexibility</div>
             <div class="stat-note">Duration: 45 min · Level: Beginner–Advanced</div>
-            <button class="btn-primary disabled-btn" style="margin-top:10px;">View Details</button>
+            <div class="btn-primary fake-btn" style="margin-top:10px;">View Details</div>
           </div>
 
+          <!-- Program 3 -->
           <div class="stat-card">
             <img src="hiit.jpg" alt="HIIT Class" style="width:100%; border-radius:8px; margin-bottom:8px;">
             <div class="stat-value">HIIT Power Workout</div>
             <div class="stat-note">Duration: 30 min · Intensity: High</div>
-            <button class="btn-primary disabled-btn" style="margin-top:10px;">View Details</button>
+            <div class="btn-primary fake-btn" style="margin-top:10px;">View Details</div>
           </div>
 
         </div>
@@ -75,7 +77,6 @@
     <footer>
       GymEase · Home
     </footer>
-
   </div>
 </body>
 </html>
