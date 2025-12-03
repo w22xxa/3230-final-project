@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GymEase | Classes</title>
+    <style>
+        /* RESET & BASICS */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* COLORS */
+        :root {
+            --primary-red: #D32F2F;
+            --dark-bg: #1f1f24;
+            --text-white: #ffffff;
+            --gray-light: #e0e0e0;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background-color: var(--primary-red);
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        .nav-logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .nav-links li a:hover {
+            text-decoration: underline;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn-white {
+            background: white;
+            color: var(--primary-red);
+            border: none;
+            padding: 8px 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+
+        .btn-login {
+            background: transparent;
+            color: white;
+            border: 1px solid white;
+            padding: 8px 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: url('https://source.unsplash.com/1600x400/?gym,fitness') no-repeat center center/cover;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        /* CATEGORIES SECTION */
+        .categories-section {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .categories-section h2 {
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto 50px auto;
+        }
+
+        .cat-card {
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        .cat-box {
+            background-color: #ffcccc;
+            height: 100px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #555;
+            font-size: 12px;
+        }
+
+        .btn-view {
+            background: white;
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        /* SCHEDULE SECTION (Two Columns) */
+        .schedule-container {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px 60px 20px;
+            gap: 30px;
+        }
+
+        /* SIDEBAR FILTERS */
+        .filters {
+            width: 25%;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .filters h3 {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .filter-group {
+            margin-bottom: 20px;
+        }
+
+        .filter-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .slider-container {
+            width: 100%;
+        }
+
+        .slider-range {
+            width: 100%;
+        }
+
+        .tag-container {
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: #eee;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+        }
+
+        .tag.active {
+            background: #666;
+            color: white;
+            border-color: #666;
+        }
+
+        /* SCHEDULE LIST */
+        .schedule-list {
+            width: 75%;
+        }
+
+        .date-tabs {
+            display: flex;
+            border-bottom: 2px solid #ddd;
+            margin-bottom: 20px;
+        }
+
+        .date-tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            color: #666;
+        }
+
+        .date-tab.active {
+            border-bottom: 3px solid var(--primary-red);
+            color: #333;
+        }
+
+        .class-card {
+            background: white;
+            border-left: 5px solid var(--primary-red);
+            padding: 20px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .class-time {
+            width: 20%;
+        }
+        .class-time h4 { font-size: 18px; }
+        .class-time span { font-size: 12px; color: #666; }
+
+        .class-info {
+            width: 50%;
+        }
+        .class-info h4 { font-size: 18px; margin-bottom: 5px; }
+        .class-info p { font-size: 14px; color: #666; }
+        .location { color: var(--primary-red); font-weight: bold; font-size: 12px;}
+
+        .class-action {
+            width: 25%;
+            text-align: right;
+        }
+
+        .btn-book {
+            background: var(--primary-red);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .btn-waitlist {
+            background: var(--primary-red);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.7;
+        }
+
+        .spots-left {
+            display: block;
+            margin-top: 5px;
+            font-size: 11px;
+            color: #666;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-logo">GymEase Fitness</div>
+        <ul class="nav-links">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">MEMBERSHIP</a></li>
+            <li><a href="#">CLUBS</a></li>
+            <li><a href="#">CLASSES</a></li>
+        </ul>
+        <div class="nav-buttons">
+            <button class="btn-white">BECOME A MEMBER</button>
+            <button class="btn-login">LOG IN</button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Fitness Classes</h1>
+            <p>Find the perfect class to achieve your goals</p>
+        </div>
+    </header>
+
+    <section class="categories-section">
+        <h2>Class Categories</h2>
+        <div class="category-grid">
+            <div class="cat-card">
+                <div class="cat-box">IMG</div>
+                <button class="btn-view">VIEW CLASSES</button>
+                <p>Cardio</p>
+            </div>
+            <div class="cat-card">
+                <div class="cat-box">IMG</div>
+                <button class="btn-view">VIEW CLASSES</button>
+                <p>Strength</p>
+            </div>
+            <div class="cat-card">
+                <div class="cat-box">IMG</div>
+                <button class="btn-view">VIEW CLASSES</button>
+                <p>Yoga</p>
+            </div>
+            <div class="cat-card">
+                <div class="cat-box">IMG</div>
+                <button class="btn-view">VIEW CLASSES</button>
+                <p>Cycling</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="schedule-container">
+        
+        <aside class="filters">
+            <h3>Class Schedule Filters</h3>
+            
+            <div class="filter-group">
+                <label>📍 Club Location</label>
+                <select style="width: 100%; padding: 5px;">
+                    <option>Toronto Centre</option>
+                    <option>Mississauga North</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label>Class starts:</label>
+                <input type="range" class="slider-range" min="5" max="22">
+                <div style="display:flex; justify-content:space-between; font-size:10px;">
+                    <span>5:00am</span>
+                    <span>10:00pm</span>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <label>Class duration:</label>
+                <div class="tag-container">
+                    <span class="tag">15 min</span>
+                    <span class="tag active">30 min</span>
+                    <span class="tag">45 min</span>
+                    <span class="tag">60 min</span>
+                    <span class="tag">90 min</span>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <label>Class intensity:</label>
+                <div class="tag-container">
+                    <span class="tag">Low</span>
+                    <span class="tag">Medium</span>
+                    <span class="tag">High</span>
+                </div>
+            </div>
+        </aside>
+
+        <main class="schedule-list">
+            
+            <div class="date-tabs">
+                <div class="date-tab active">Today, Oct 24</div>
+                <div class="date-tab">Sat, Oct 25</div>
+                <div class="date-tab">Sun, Oct 26</div>
+                <div class="date-tab">Mon, Oct 27</div>
+            </div>
+
+            <div class="class-card">
+                <div class="class-time">
+                    <h4>8:10am</h4>
+                    <span>60 minutes</span>
+                </div>
+                <div class="class-info">
+                    <h4>HIIT Blast</h4>
+                    <p>Instructor: Sarah J.</p>
+                    <p class="location">📍 Toronto Centre</p>
+                </div>
+                <div class="class-action">
+                    <button class="btn-book">BOOK</button>
+                    <span class="spots-left">10 spots left</span>
+                </div>
+            </div>
+
+            <div class="class-card">
+                <div class="class-time">
+                    <h4>10:30am</h4>
+                    <span>120 minutes</span>
+                </div>
+                <div class="class-info">
+                    <h4>Power Yoga</h4>
+                    <p>Instructor: Mike T.</p>
+                    <p class="location">📍 Toronto Centre</p>
+                </div>
+                <div class="class-action">
+                    <button class="btn-waitlist">JOIN WAITLIST</button>
+                    <span class="spots-left">This class is full.</span>
+                </div>
+            </div>
+
+            <div class="class-card">
+                <div class="class-time">
+                    <h4>2:00pm</h4>
+                    <span>30 minutes</span>
+                </div>
+                <div class="class-info">
+                    <h4>Core Express</h4>
+                    <p>Instructor: Jenny L.</p>
+                    <p class="location">📍 Toronto Centre</p>
+                </div>
+                <div class="class-action">
+                    <button class="btn-book">BOOK</button>
+                    <span class="spots-left">25 spots left</span>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <footer class="footer">
+        <p>Copyright GymEase Fitness © 2025</p>
+    </footer>
+
+</body>
+</html>
