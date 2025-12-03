@@ -1,149 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GymEase | Class Schedule</title>
-    <!-- Link to the separate CSS file -->
-    <link rel="stylesheet" href="gym-style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GymEase – Classes</title>
+  <link rel="stylesheet" href="styles2.css">
 </head>
 <body>
+  <div class="page-wrapper">
 
-    <!-- NAVIGATION BAR -->
-    <nav class="navbar">
-        <div class="logo">GymEase Fitness</div>
-        <ul class="nav-links">
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">MEMBERSHIP</a></li>
-            <li><a href="#">CLUBS</a></li>
-            <li class="active"><a href="#">CLASSES</a></li>
-        </ul>
-    </nav>
+    <!-- HEADER -->
+    <header>
+      <h1>GYMEASE</h1>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="classes.html" class="active">Classes</a>
+        <a href="memberships.html">Memberships</a>
+        <a href="history.html">History</a>
+        <a href="clubs.html">Clubs</a>
+      </nav>
+    </header>
 
-    <!-- MAIN CONTAINER -->
-    <div class="schedule-container">
+    <!-- MAIN LAYOUT -->
+    <main class="history-layout" style="margin-top:24px;">
 
-        <!-- SIDEBAR FILTERS -->
-        <aside class="filter-panel">
-            <h3>Filters</h3>
+      <!-- LEFT: Filter Panel -->
+      <aside class="history-stats">
+        <div class="history-tag">Filters</div>
 
-            <div class="filter-group">
-                <label>Club Location</label>
-                <select>
-                    <option>Toronto Centre</option>
-                    <option>Mississauga North</option>
-                    <option>Scarborough East</option>
-                </select>
-            </div>
+        <div class="stat-card">
+          <div class="stat-label">Location</div>
+          <select>
+            <option>Toronto Centre</option>
+            <option>Mississauga North</option>
+            <option>Scarborough East</option>
+          </select>
+        </div>
 
-            <div class="filter-group">
-                <label>Class Start Time</label>
-                <input type="range" min="5" max="22" value="10">
-                <div style="display:flex; justify-content:space-between; font-size:10px; color:#aaa; margin-top:5px;">
-                    <span>5:00am</span>
-                    <span>10:00pm</span>
-                </div>
-            </div>
+        <div class="stat-card">
+          <div class="stat-label">Time</div>
+          <input type="range" min="5" max="22" value="10" style="width:100%;">
+          <div style="display:flex; justify-content:space-between; font-size:0.75rem; color:#bdbdbd; margin-top:4px;">
+            <span>5:00am</span>
+            <span>10:00pm</span>
+          </div>
+        </div>
 
-            <div class="filter-group">
-                <label>Duration</label>
-                <div class="tag-container">
-                    <span class="filter-tag">30 min</span>
-                    <span class="filter-tag active">45 min</span>
-                    <span class="filter-tag">60 min</span>
-                </div>
-            </div>
+        <div class="stat-card">
+          <div class="stat-label">Duration</div>
+          <div style="display:flex; gap:6px; flex-wrap:wrap;">
+            <span class="filter-tag">30 min</span>
+            <span class="filter-tag active">45 min</span>
+            <span class="filter-tag">60 min</span>
+          </div>
+        </div>
 
-            <div class="filter-group">
-                <label>Intensity</label>
-                <div class="tag-container">
-                    <span class="filter-tag">Low</span>
-                    <span class="filter-tag active">High</span>
-                </div>
-            </div>
-        </aside>
+        <div class="stat-card">
+          <div class="stat-label">Intensity</div>
+          <div style="display:flex; gap:6px;">
+            <span class="filter-tag">Low</span>
+            <span class="filter-tag active">High</span>
+          </div>
+        </div>
+      </aside>
 
-        <!-- SCHEDULE LIST -->
-        <main class="schedule-content">
+      <!-- RIGHT: Class List -->
+      <section class="history-sections">
+        <div class="section-card">
+          <div style="display:flex; justify-content:space-between; margin-bottom:12px;">
+            <h3>8:10am</h3>
+            <span style="color:#b8b8b8;">60 min</span>
+          </div>
+          <h3>HIIT Circuit</h3>
+          <p>Instructor: <span style="color:#ffab91;">Sarah Lee</span></p>
+          <button class="btn-primary" style="margin-top:10px;" onclick="location.href='payment.html'">Book Class</button>
+        </div>
 
-            <!-- Date Tabs -->
-            <div class="date-tabs">
-                <div class="date-tab active">Today, Oct 24</div>
-                <div class="date-tab">Sat, Oct 25</div>
-                <div class="date-tab">Sun, Oct 26</div>
-                <div class="date-tab">Mon, Oct 27</div>
-            </div>
+        <div class="section-card">
+          <div style="display:flex; justify-content:space-between; margin-bottom:12px;">
+            <h3>10:00am</h3>
+            <span style="color:#b8b8b8;">45 min</span>
+          </div>
+          <h3>Yoga Flow</h3>
+          <p>Instructor: <span style="color:#ffab91;">Emma Wong</span></p>
+          <button class="btn-primary" style="margin-top:10px;" onclick="location.href='payment.html'">Book Class</button>
+        </div>
 
-            <!-- Class 1 -->
-            <div class="class-card">
-                <div class="class-time">
-                    <h2>8:10am</h2>
-                    <span>60 minutes</span>
-                </div>
-                <div class="class-details">
-                    <h3>HIIT Circuit</h3>
-                    <p>Instructor: <span class="instructor">Sarah J.</span></p>
-                    <p>Toronto Centre</p>
-                </div>
-                <div class="class-action">
-                    <button class="btn btn-book">Book Now</button>
-                    <span class="spots-left">10 spots left</span>
-                </div>
-            </div>
+        <div class="section-card">
+          <div style="display:flex; justify-content:space-between; margin-bottom:12px;">
+            <h3>11:30am</h3>
+            <span style="color:#b8b8b8;">30 min</span>
+          </div>
+          <h3>Strength Training</h3>
+          <p>Instructor: <span style="color:#ffab91;">John Doe</span></p>
+          <button class="btn-primary" style="margin-top:10px;" onclick="location.href='payment.html'">Book Class</button>
+        </div>
 
-            <!-- Class 2 (Waitlist) -->
-            <div class="class-card">
-                <div class="class-time">
-                    <h2>10:30am</h2>
-                    <span>120 minutes</span>
-                </div>
-                <div class="class-details">
-                    <h3>Power Yoga</h3>
-                    <p>Instructor: <span class="instructor">Mike T.</span></p>
-                    <p>Toronto Centre</p>
-                </div>
-                <div class="class-action">
-                    <button class="btn btn-waitlist">Join Waitlist</button>
-                    <span class="spots-left">Class is full</span>
-                </div>
-            </div>
+      </section>
 
-            <!-- Class 3 -->
-            <div class="class-card">
-                <div class="class-time">
-                    <h2>2:00pm</h2>
-                    <span>30 minutes</span>
-                </div>
-                <div class="class-details">
-                    <h3>Core Express</h3>
-                    <p>Instructor: <span class="instructor">Jenny L.</span></p>
-                    <p>Toronto Centre</p>
-                </div>
-                <div class="class-action">
-                    <button class="btn btn-book">Book Now</button>
-                    <span class="spots-left">25 spots left</span>
-                </div>
-            </div>
+    </main>
 
-            <!-- Class 4 -->
-            <div class="class-card">
-                <div class="class-time">
-                    <h2>5:30pm</h2>
-                    <span>45 minutes</span>
-                </div>
-                <div class="class-details">
-                    <h3>Zumba Dance</h3>
-                    <p>Instructor: <span class="instructor">Alicia K.</span></p>
-                    <p> Toronto Centre</p>
-                </div>
-                <div class="class-action">
-                    <button class="btn btn-book">Book Now</button>
-                    <span class="spots-left">18 spots left</span>
-                </div>
-            </div>
-
-        </main>
-    </div>
-
+    <!-- FOOTER -->
+    <footer>
+      GymEase · Classes
+    </footer>
+  </div>
 </body>
 </html>
