@@ -1,0 +1,351 @@
+/* RESET + GLOBAL ------------------------------------------------------------ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #111;
+  color: #f5f5f5;
+}
+
+/* PAGE WRAPPER -------------------------------------------------------------- */
+
+.page-wrapper {
+  max-width: 1200px;
+  margin: 32px auto;
+  padding: 0 32px 40px;
+  background: #171717;
+  border-radius: 12px;
+  border: 1px solid #262626;
+}
+
+/* HEADER + NAV -------------------------------------------------------------- */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0 16px;
+  border-bottom: 1px solid #262626;
+}
+
+header h1 {
+  font-size: 1.4rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.nav {
+  display: flex;
+  gap: 8px;
+}
+
+.nav a {
+  text-decoration: none;
+  font-size: 0.8rem;
+  padding: 6px 18px;
+  border-radius: 999px;
+  border: 1px solid #3a3a3a;
+  background: #212121;
+  color: #f5f5f5;
+}
+
+.nav a:hover {
+  background: #2c2c2c;
+}
+
+.nav a.active {
+  background: #e53935;
+  border-color: #e53935;
+}
+
+/* TAGS & TITLES -------------------------------------------------------------- */
+
+.section-tag,
+.history-tag {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #bdbdbd;
+  margin-bottom: 8px;
+}
+
+.history-title,
+.payment-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.summary-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* HISTORY PAGE --------------------------------------------------------------- */
+
+.history-layout {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 32px;
+  padding-top: 24px;
+}
+
+.history-subtitle {
+  font-size: 0.95rem;
+  color: #ccc;
+  max-width: 520px;
+  line-height: 1.5;
+}
+
+/* Common card style (shared for history & payment) */
+.summary-card,
+.payment-card,
+.section-card {
+  background: #1b1b1b;
+  border-radius: 12px;
+  border: 1px solid #262626;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+/* Highlight card */
+.history-highlight-card {
+  margin-top: 24px;
+  padding: 18px 20px;
+  background: #1e1e1e;
+  border-radius: 14px;
+  border: 1px solid #2b2b2b;
+}
+
+.history-highlight-card h3 {
+  text-transform: uppercase;
+  color: #ff7961;
+  letter-spacing: 0.12em;
+  margin-bottom: 8px;
+}
+
+.history-highlight-card p {
+  font-size: 0.9rem;
+  color: #d6d6d6;
+  line-height: 1.55;
+  margin-bottom: 10px;
+}
+
+/* Stats right side */
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.stat-card {
+  background: #1e1e1e;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #2c2c2c;
+}
+
+.stat-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #b0b0b0;
+}
+
+.stat-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.stat-note {
+  font-size: 0.8rem;
+  color: #bdbdbd;
+}
+
+/* Lower history sections */
+.history-sections {
+  grid-column: 1 / -1;
+  margin-top: 32px;
+}
+
+.section-card h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #ffab91;
+  margin-bottom: 8px;
+}
+
+.section-card p,
+.section-card li {
+  color: #d6d6d6;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.section-card ul {
+  padding-left: 18px;
+  margin-top: 8px;
+}
+
+/* PAYMENT PAGE --------------------------------------------------------------- */
+
+.payment-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 1.2fr;
+  gap: 32px;
+  padding-top: 24px;
+}
+
+/* Summary details box */
+.summary-details {
+  background: #151515;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #2b2b2b;
+  margin-bottom: 14px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid #212121;
+}
+
+.summary-row:last-child {
+  border-bottom: none;
+}
+
+.summary-row span:first-child {
+  color: #b8b8b8;
+}
+
+.total-row {
+  font-weight: 600;
+}
+
+.summary-price {
+  color: #ffab91;
+}
+
+.summary-note {
+  font-size: 0.8rem;
+  color: #b8b8b8;
+  line-height: 1.5;
+}
+
+/* Form */
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-group label {
+  font-size: 0.8rem;
+  color: #dcdcdc;
+}
+
+.form-group input {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: #121212;
+  color: #f5f5f5;
+}
+
+.form-group input::placeholder {
+  color: #777;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+/* Checkbox */
+.form-checkbox {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.form-checkbox label {
+  font-size: 0.8rem;
+}
+
+/* Button */
+.btn-primary {
+  margin-top: 6px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 999px;
+  border: none;
+  background: #e53935;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.btn-primary:hover {
+  background: #f45145;
+}
+
+/* Secure note */
+.secure-note {
+  font-size: 0.75rem;
+  color: #9e9e9e;
+}
+
+/* FOOTER -------------------------------------------------------------------- */
+
+footer {
+  margin-top: 26px;
+  font-size: 0.7rem;
+  color: #8a8a8a;
+  text-align: right;
+  border-top: 1px solid #262626;
+  padding-top: 10px;
+}
+
+/* RESPONSIVE ---------------------------------------------------------------- */
+
+@media (max-width: 900px) {
+  .page-wrapper {
+    margin: 16px;
+    padding: 0 18px 28px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .history-layout,
+  .payment-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
