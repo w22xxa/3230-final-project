@@ -1,104 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GymEase | Clubs</title>
-    <!-- Link to the separate CSS file -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GymEase – Clubs</title>
+  <link rel="stylesheet" href="styles2.css">
 </head>
 <body>
+  <div class="page-wrapper">
 
-    <!-- NAVIGATION BAR -->
-    <nav class="navbar">
-        <div class="logo">GymEase Fitness</div>
-        <ul class="nav-links">
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">MEMBERSHIP</a></li>
-            <li><a href="#">CLUBS</a></li>
-            <li class="active"><a href="#">CLASSES</a></li>
-        </ul>
-    </nav>
+    <!-- HEADER -->
+    <header>
+      <h1>GYMEASE</h1>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="memberships.html">Membership</a>
+        <a href="clubs.html" class="active">Clubs</a>
+        <a href="classes.html">Classes</a>
+        <a href="history.html">History</a>
+      </nav>
+    </header>
 
-    </style>
-</head>
+    <!-- MAIN CONTENT -->
+    <main style="margin-top:24px;">
+      <h2 class="history-title" style="text-align:center;">Find a Club</h2>
 
-<body>
+      <!-- Search Bar -->
+      <div style="text-align:center; margin:16px 0;">
+        <input type="text" placeholder="Search by address, postal code, etc." 
+               style="width:80%; padding:10px; border-radius:8px; border:1px solid #333; background:#121212; color:#f5f5f5;">
+      </div>
 
-<h2 class="head-title">Find a Club</h2>
-
-<div class="searchbar">
-    <input type="text" placeholder="Search by address, postal code, etc."/>
-</div>
-
-<div class="club-bar">
-    <div class="club-list">
-        <div class="club-item">
-            <h4>Club 1 Name</h4>
-            <p>Address, phone number, distance, hours</p>
-            <a class="btn btn-dir" href="#">DIRECTIONS</a>
-            <a class="btn btn-class" href="#">CLASS SCHEDULE</a>
+      <!-- Club List -->
+      <section class="history-sections" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:24px; margin-bottom:32px;">
+        
+        <!-- Club 1 -->
+        <div class="section-card">
+          <h3>Club 1 Name</h3>
+          <p>Address, phone number, distance, hours</p>
+          <button class="btn-primary" onclick="location.href='#'">Directions</button>
+          <button class="btn-primary" style="margin-top:8px;" onclick="location.href='#'">Class Schedule</button>
         </div>
 
-        <div class="club-item">
-            <h4>Club 2 Name</h4>
-            <p>Address, phone number, distance, hours</p>
-            <a class="btn btn-dir" href="#">DIRECTIONS</a>
-            <a class="btn btn-class" href="#">CLASS SCHEDULE</a>
+        <!-- Club 2 -->
+        <div class="section-card">
+          <h3>Club 2 Name</h3>
+          <p>Address, phone number, distance, hours</p>
+          <button class="btn-primary" onclick="location.href='#'">Directions</button>
+          <button class="btn-primary" style="margin-top:8px;" onclick="location.href='#'">Class Schedule</button>
         </div>
 
-        <div class="club-item">
-            <h4>Club 3 Name</h4>
-            <p>Address, phone number, distance, hours</p>
-            <a class="btn btn-dir" href="#">DIRECTIONS</a>
-            <a class="btn btn-class" href="#">CLASS SCHEDULE</a>
+        <!-- Club 3 -->
+        <div class="section-card">
+          <h3>Club 3 Name</h3>
+          <p>Address, phone number, distance, hours</p>
+          <button class="btn-primary" onclick="location.href='#'">Directions</button>
+          <button class="btn-primary" style="margin-top:8px;" onclick="location.href='#'">Class Schedule</button>
         </div>
-    </div>
 
-    
-    <div class="map-img">
-        <img src="https://www.wired.com/2016/11/use-google-maps-plan-awesome-vacation/">
-    </div>
-</div>
+      </section>
 
-<div class="amenities-title">
-    <h3>Featured Amenities</h3>
+      <!-- Amenities -->
+      <h3 class="history-title" style="margin-bottom:16px;">Featured Amenities</h3>
+      <section class="history-sections" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:16px; margin-bottom:32px;">
+        <div class="section-card" style="text-align:center;">IMG<br>Amenity Name</div>
+        <div class="section-card" style="text-align:center;">IMG<br>Amenity Name</div>
+        <div class="section-card" style="text-align:center;">IMG<br>Amenity Name</div>
+        <div class="section-card" style="text-align:center;">IMG<br>Amenity Name</div>
+        <div class="section-card" style="text-align:center;">IMG<br>Amenity Name</div>
+        <div class="section-card" style="text-align:center;">IMG<br>Amenity Name</div>
+      </section>
 
-    <div class="amenity-list">
-        <div class="amenity-box">IMG<br>Amenity Name</div>
-        <div class="amenity-box">IMG<br>Amenity Name</div>
-        <div class="amenity-box">IMG<br>Amenity Name</div>
-        <div class="amenity-box">IMG<br>Amenity Name</div>
-        <div class="amenity-box">IMG<br>Amenity Name</div>
-        <div class="amenity-box">IMG<br>Amenity Name</div>
-    </div>
-</div>
-
-    <div class="tour">
-
-    <div class="tour-title">
+      <!-- Book a Tour -->
+      <section class="section-card" style="max-width:600px; margin:0 auto; text-align:center;">
         <h3>Book a Tour Today!</h3>
-
-        <p><strong>Your Nearest Club:</strong><br>
-            Toronto Centre Club Details<br>
-            Toronto, ON – 1.8km away
-        </p>
-
+        <p><strong>Your Nearest Club:</strong><br>Toronto Centre Club Details<br>Toronto, ON – 1.8km away</p>
         <p>Fill out the form below to sign up!</p>
-
-        <div class="tour-form">
-            <input type="text" placeholder="First Name">
-            <input type="text" placeholder="Last Name">
-            <input type="email" placeholder="Email Address">
-            <input type="text" placeholder="Phone Number">
-            <button class="start-btn">START NOW</button>
+        <div class="tour-form" style="display:flex; flex-direction:column; gap:12px; margin-top:12px;">
+          <input type="text" placeholder="First Name">
+          <input type="text" placeholder="Last Name">
+          <input type="email" placeholder="Email Address">
+          <input type="text" placeholder="Phone Number">
+          <button class="btn-primary" onclick="location.href='#'">Start Now</button>
         </div>
-    </div>
-</div>
+      </section>
 
-<div class="footer">
-    ©2025 GymEase Fitness
-</div>
+    </main>
 
-    </body>
-    </html>
+    <!-- FOOTER -->
+    <footer>
+      ©2025 GymEase Fitness
+    </footer>
+
+  </div>
+</body>
+</html>
